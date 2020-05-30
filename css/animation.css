@@ -9,6 +9,7 @@
 
 
 .wrapper {
+    margin-top: 100px;
     display: inline-block;
     width: 1000px;
     height: 1000px;    
@@ -18,33 +19,7 @@
     display: none;
 }
 
-label::before {
-    content: " ";
-    display: block;
-    margin: 10px;
-    width: 300px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    border: 3px solid grey;
-    border-top: tomato;
-    background-color: tomato;
-    transform: perspective(15px) rotateX(-5deg);
-}
-
-label::before:hover {
-    background-color: blue;
-}
-
-label::after {
-    content: " ";
-    display: block;
-    width: 200px;
-    height: 200px;
-}
-
-.vase {
+.label {
     display: inline-block;
     width: 200px;
     height: 60px;
@@ -57,18 +32,146 @@ label::after {
     transition: border 2s linear, background 2s linear;    
 }
 
-.vase:hover {    
+.label:hover {
     border: 2px solid  DarkOrange;
     background: linear-gradient(to top, #fefcea,  #FF7F50);
     box-shadow: 1px 1px 10px tomato;
     cursor: pointer;
 }
 
-.bubl {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: .5px solid grey;
+.chahsa {
+    display: block;
+    width: 300px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 3px solid grey;
+    border-top: tomato;
+    transform: perspective(15px) rotateX(-5deg);
+    /*background-color: tomato;*/
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+    transition: background 2s linear;
+}
+
+.chahsa:hover {
+    /*background-color: #0000FF;*/
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);*/
+    cursor: pointer;
+}
+
+
+.bubbles {
+    display: block;
+    width: 300px;
+    height: 20px;
+    border: .5px solid transparent;
     margin-top: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.bubbles1, .bubbles2, .bubbles3, .bubbles4, .bubbles5, .bubbles6, .bubbles7 {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    margin-left: 15px;
+    background:  radial-gradient(rgba(30, 144, 255, 0.6));
+}
+
+.bubbles1:hover, .bubbles2:hover, .bubbles3:hover, .bubbles4:hover, .bubbles5:hover, .bubbles6:hover, .bubbles7:hover {
+    background: rgba(255, 182, 193, 1);
+
+}
+@keyframes bubll {
+    0% {transform: translate (0, 10px);};
+    20% {transform: border-radius: 20%; translate (0, 30px); rotate(90deg); scale(1.5)};
+    50% {transform: border-radius: 50%; translate (0, 30px); rotate(90deg); scale(0.5); 
+        background:  radial-gradient(rgba(30, 144, 255, 0.6) 80%, rgba(rgba(102, 51, 153, 1) 20%)};
+    75% {transform: border-radius: 50%; scale(0.5); background: radial-gradient(rgba(30, 144, 255, 0.3) 70%, rgba(rgba(102, 51, 153, 0.3) 30%)};
+    100% {transform: background: radial-gradient(rgba(30, 144, 255, 0) 70%, rgba(rgba(102, 51, 153, 0) 30%)};
+};
+
+.bubbles1 {
+    animation: bubl1 1s linear 0.05s infinite normal fill-mode;
+  
+}
+
+@keyframes bubl2 {
+    0% {transform: };
+    25% {transform: __________ };
+    50% {transform: border-radius: 50%;  };
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+.bubbles2 {
+    animation: bubl2 1s linear 0s infinite normal fill-mode;
+   
+}
+
+@keyframes bubl3 {
+    0% {transform: ___________};
+    25% {transform: __________ };
+    50% {transform: ___________};
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+.bubbles3 {
+    animation: bubl3 1s linear 0.03s infinite normal fill-mode;
+ 
+
+}
+
+@keyframes bubl4 {
+    0% {transform: ___________};
+    25% {transform: __________ };
+    50% {transform: ___________};
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+
+.bubbles4 {
+    animation: bubl4 1s linear 0s infinite normal fill-mode;
+  
+}
+
+@keyframes bubl5 {
+    0% {transform: ___________};
+    25% {transform: __________ };
+    50% {transform: ___________};
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+.bubbles5 {
+    animation: bubl5 1s linear 0s infinite normal fill-mode;
+  
+}
+
+@keyframes bubl6 {
+    0% {transform: ___________};
+    25% {transform: __________ };
+    50% {transform: ___________};
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+.bubbles6 {  
+    animation: bubl6 1s linear 0.3s infinite normal fill-mode;
+
+}
+
+@keyframes bubl7 {
+    0% {transform: ___________};
+    25% {transform: __________ };
+    50% {transform: ___________};
+    75% {transform: ___________};
+    100% {transform: ___________};
+}
+
+.bubbles7 {
+    animation: bubl7 1s linear 0.06s infinite normal fill-mode;
 
 }

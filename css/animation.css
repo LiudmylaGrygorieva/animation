@@ -29,7 +29,7 @@
     color: tomato;
     border: 2px solid Goldenrod;
     background: linear-gradient(to top, #fefcea, #f1da36);
-    transition: border 2s linear, background 2s linear;    
+    transition: all 2s linear;    
 }
 
 .label:hover {
@@ -49,17 +49,14 @@
     border: 3px solid grey;
     border-top: tomato;
     transform: perspective(15px) rotateX(-5deg);
-    /*background-color: tomato;*/
     background: linear-gradient(to bottom, rgba(255, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
-    transition: background 2s linear;
+    transition:  2s linear;
 }
 
-.chahsa:hover {
-    /*background-color: #0000FF;*/
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);*/
+#check:checked~.chahsa {
+    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
     cursor: pointer;
 }
-
 
 .bubbles {
     display: block;
@@ -71,107 +68,188 @@
     margin-right: auto;
 }
 
-
-
-.bubbles1, .bubbles2, .bubbles3, .bubbles4, .bubbles5, .bubbles6, .bubbles7 {
+.bubble {
     display: inline-block;
     width: 15px;
     height: 15px;
-    border: 0.5px solid grey;
+    border: 0.5px solid transparent;
     border-radius: 5px;
-    margin-left: 15px;
-    background:  radial-gradient(rgba(30, 144, 255, 0.6));
+    margin-left: 15px;    
+}
+ 
+@keyframes bubl1 {
+    0% {
+        background-color:rgba(255, 68, 68, 1);
+        transform: translate(0, -10px); 
+    }
+
+    20% {
+        background-color:rgba(255, 68, 68, 1);
+        border-radius: 20%; 
+        transform: translate(0, -30px) rotate(90deg) scale(1.5);
+        box-shadow: 0 0 0 1px rgba(205, 92, 92, 1);
+    }
+
+    30% {
+        background-color: rgba(255, 68, 68, 1);
+        border-radius: 20%; 
+        transform: translate(0, -50px) rotate(90deg) scale(1.5);
+        box-shadow: 0 0 0 3px rgba(205, 92, 92, 1);
+    }
+
+    50% {
+        background-color: rgba(255, 68, 68, 0.5);
+        border-radius: 50%;
+        transform:  translate(0, -70px) rotate(90deg) scale(2);
+        box-shadow: 0 0 0 5px rgba(205, 92, 92, .5);
+    }
+    
+    75% {
+        background-color: rgba(255, 68, 68, 0.3);
+        border-radius: 50%;
+        transform:  translate(0, -150px) rotate(90deg) scale(2.5);
+        box-shadow: 0 0 0 10px rgba(205, 92, 92, .3);
+    }
+    90% {
+        background-color: rgba(255, 68, 68, 0.2);
+        border-radius: 50%;
+        transform:  translate(0, -200px) rotate(90deg) scale(3.5);
+        box-shadow: 0 0 0 10px  rgba(205, 92, 92, .2);  
+    }
+
+    100% {
+        background-color: rgba(255, 68, 68, 0);
+        border-radius: 50%;
+        transform:  translate(0, -200px) rotate(90deg) scale(3.5);
+        box-shadow: 0 0 0 10px  rgba(205, 92, 92, 0);      
+    }
 }
 
-.bubbles1:hover, .bubbles2:hover, .bubbles3:hover, .bubbles4:hover, .bubbles5:hover, .bubbles6:hover, .bubbles7:hover {
-    background: rgba(255, 182, 193, 1);
-
+.b1 {
+    animation: bubl1 1s linear -1s infinite;
 }
-@keyframes bubll {
-    0% {transform: translate (0, 10px);};
-    20% {transform: border-radius: 20%; translate (0, 30px); rotate(90deg); scale(1.5)};
-    50% {transform: border-radius: 50%; translate (0, 30px); rotate(90deg); scale(0.5); 
-        background:  radial-gradient(rgba(30, 144, 255, 0.6) 80%, rgba(rgba(102, 51, 153, 1) 20%)};
-    75% {transform: border-radius: 50%; scale(0.5); background: radial-gradient(rgba(30, 144, 255, 0.3) 70%, rgba(rgba(102, 51, 153, 0.3) 30%)};
-    100% {transform: background: radial-gradient(rgba(30, 144, 255, 0) 70%, rgba(rgba(102, 51, 153, 0) 30%)};
-};
 
-.bubbles1 {
-    animation: bubl1 1s linear 0.05s infinite normal fill-mode;
-  
+.b2 {
+    animation: bubl1 2s linear -1s infinite;
 }
+
+.b3 {
+    animation: bubl1 4s linear -1s infinite;
+}
+
+.b4 {
+    animation: bubl1 4s linear -1s infinite;
+}
+
+.b5 {
+    animation: bubl2 4s linear -1s infinite;
+}
+
+.b6 {
+    animation: bubl1 4s linear -1s infinite;
+}
+
+.b7 {
+    animation: bubl1 4s linear -1s infinite;
+}
+
 
 @keyframes bubl2 {
-    0% {transform: };
-    25% {transform: __________ };
-    50% {transform: border-radius: 50%;  };
-    75% {transform: ___________};
-    100% {transform: ___________};
-}
-.bubbles2 {
-    animation: bubl2 1s linear 0s infinite normal fill-mode;
-   
+    0% {background-color:rgba(106, 90, 205, 1);
+        transform: translate(0, -10px); 
+    }
+
+    20% {
+        background-color: rgba(106, 90, 205, 1);
+        border-radius: 20%; 
+        transform: translate(0, -30px) rotate(90deg) scale(1.5);
+        box-shadow: 0 0 0 1px rgba(75, 0, 130, 1);
+    }
+
+    30% {
+        background-color: rgba(106, 90, 205, 1);
+        border-radius: 20%; 
+        transform: translate(0, -50px) rotate(90deg) scale(1.5);
+        box-shadow: 0 0 0 3px rgba(75, 0, 130, 1);
+    }
+
+    50% {
+        background-color: rgba(106, 90, 205, 0.5);
+        border-radius: 50%;
+        transform:  translate(0, -70px) rotate(90deg) scale(2);
+        box-shadow: 0 0 0 5px rgba(72, 61, 139, .5);
+    }
+    
+    75% {
+        background-color: rgba(106, 90, 205, 0.3);
+        border-radius: 50%;
+        transform:  translate(0, -150px) rotate(90deg) scale(2.5);
+        box-shadow: 0 0 0 10px rgba(72, 61, 139, .3);
+    }
+    90% {
+        background-color: rgba(106, 90, 205,0.21);
+        border-radius: 50%;
+        transform:  translate(0, -200px) rotate(90deg) scale(3.5);
+        box-shadow: 0 0 0 10px  rgba(72, 61, 139, .2);  
+    }
+
+    100% {
+        background-color: rgba(106, 90, 205, 0);
+        border-radius: 50%;
+        transform:  translate(0, -200px) rotate(90deg) scale(3.5);
+        box-shadow: 0 0 0 10px  rgba(72, 61, 139, 0);      
+    }
 }
 
-@keyframes bubl3 {
-    0% {transform: ___________};
-    25% {transform: __________ };
-    50% {transform: ___________};
-    75% {transform: ___________};
-    100% {transform: ___________};
-}
-.bubbles3 {
-    animation: bubl3 1s linear 0.03s infinite normal fill-mode;
- 
-
+#check:checked~.bubbles .b1 {
+    animation: bubl2 2s linear -1s infinite;
 }
 
-@keyframes bubl4 {
-    0% {transform: ___________};
-    25% {transform: __________ };
-    50% {transform: ___________};
-    75% {transform: ___________};
-    100% {transform: ___________};
+#check:checked~.bubbles .b2 {
+    animation: bubl2 2.5s linear -1s infinite;
 }
 
-.bubbles4 {
-    animation: bubl4 1s linear 0s infinite normal fill-mode;
-  
+#check:checked~.bubbles .b3 {
+    animation: bubl2 2.5s linear -0.5s infinite;
 }
 
-@keyframes bubl5 {
-    0% {transform: ___________};
-    25% {transform: __________ };
-    50% {transform: ___________};
-    75% {transform: ___________};
-    100% {transform: ___________};
-}
-.bubbles5 {
-    animation: bubl5 1s linear 0s infinite normal fill-mode;
-  
+#check:checked~.bubbles .b4 {
+    animation: bubl2 3.5s linear -2s infinite;
 }
 
-@keyframes bubl6 {
-    0% {transform: ___________};
-    25% {transform: __________ };
-    50% {transform: ___________};
-    75% {transform: ___________};
-    100% {transform: ___________};
-}
-.bubbles6 {  
-    animation: bubl6 1s linear 0.3s infinite normal fill-mode;
-
+#check:checked~.bubbles .b5 {
+    animation: bubl2 1s linear -1s infinite;
 }
 
-@keyframes bubl7 {
-    0% {transform: ___________};
-    25% {transform: __________ };
-    50% {transform: ___________};
-    75% {transform: ___________};
-    100% {transform: ___________};
+#check:checked~.bubbles .b6 {
+    animation: bubl2 2.5s linear -2.5s infinite;
 }
 
-.bubbles7 {
-    animation: bubl7 1s linear 0.06s infinite normal fill-mode;
+#check:checked~.bubbles .b7 {
+    animation: bubl2 2s linear -0.5s infinite;
+}
 
+.b1 {
+    animation: bubll 1s linear -1s infinite;
+}
+
+.b2 {
+    animation: bubll 2s linear -1s infinite;
+}
+
+.b3 {
+    animation: bubll 4s linear -1s infinite;
+}
+
+.b4 {
+    animation: bubll 4s linear -1s infinite;
+}
+.b5 {
+    animation: bubll 4s linear -1s infinite;
+}
+.b6 {
+    animation: bubll 4s linear -1s infinite;
+}
+.b7 {
+    animation: bubll 4s linear -1s infinite;
 }

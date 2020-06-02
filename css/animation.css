@@ -126,7 +126,7 @@
 }
 
 .b1 {
-    animation: bubl1 1s linear -1s infinite;
+    animation: bubl1 1s linear -2s infinite;
 }
 
 .b2 {
@@ -134,7 +134,7 @@
 }
 
 .b3 {
-    animation: bubl1 4s linear -1s infinite;
+    animation: bubl1 4s linear -1.5s infinite;
 }
 
 .b4 {
@@ -142,11 +142,11 @@
 }
 
 .b5 {
-    animation: bubl2 4s linear -1s infinite;
+    animation: bubl1 4s linear -3s infinite;
 }
 
 .b6 {
-    animation: bubl1 4s linear -1s infinite;
+    animation: bubl1 4s linear -0.5s infinite;
 }
 
 .b7 {
@@ -227,29 +227,4 @@
 
 #check:checked~.bubbles .b7 {
     animation: bubl2 2s linear -0.5s infinite;
-}
-
-.b1 {
-    animation: bubll 1s linear -1s infinite;
-}
-
-.b2 {
-    animation: bubll 2s linear -1s infinite;
-}
-
-.b3 {
-    animation: bubll 4s linear -1s infinite;
-}
-
-.b4 {
-    animation: bubll 4s linear -1s infinite;
-}
-.b5 {
-    animation: bubll 4s linear -1s infinite;
-}
-.b6 {
-    animation: bubll 4s linear -1s infinite;
-}
-.b7 {
-    animation: bubll 4s linear -1s infinite;
 }
